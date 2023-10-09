@@ -9,12 +9,11 @@ import SwiftUI
 
 struct FavoriteView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Text("You haven't saved any recipe to your favorites yet.")
                 .padding()
                 .navigationTitle("Favorites")
         }
-        .navigationViewStyle(.stack)
     }
 }
 
