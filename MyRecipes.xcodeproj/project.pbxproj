@@ -19,6 +19,7 @@
 		AA0408692ACDC43E002816A7 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0408682ACDC43E002816A7 /* RecipeModel.swift */; };
 		AA04086B2ACED975002816A7 /* RecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA04086A2ACED975002816A7 /* RecipeCard.swift */; };
 		AA09F76E2ACF38E700575EDC /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA09F76D2ACF38E700575EDC /* RecipeList.swift */; };
+		AAD3BE2F2AD0090A0020CE13 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD3BE2E2AD0090A0020CE13 /* RecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		AA0408682ACDC43E002816A7 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		AA04086A2ACED975002816A7 /* RecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCard.swift; sourceTree = "<group>"; };
 		AA09F76D2ACF38E700575EDC /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
+		AAD3BE2E2AD0090A0020CE13 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		AA0408552ACD99EB002816A7 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				AAD3BE2E2AD0090A0020CE13 /* RecipeView.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				AA0408612ACD9CA8002816A7 /* NewRecipeView.swift in Sources */,
 				AA04086B2ACED975002816A7 /* RecipeCard.swift in Sources */,
 				AA0408672ACDB443002816A7 /* TabBar.swift in Sources */,
+				AAD3BE2F2AD0090A0020CE13 /* RecipeView.swift in Sources */,
 				AA04085F2ACD9C96002816A7 /* Categories.swift in Sources */,
 				AA0408462ACD969E002816A7 /* ContentView.swift in Sources */,
 				AA0408632ACD9CBD002816A7 /* FavoriteView.swift in Sources */,
