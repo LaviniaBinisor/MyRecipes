@@ -1,13 +1,13 @@
 //
-//  TabBar.swift
+//  MainTabView.swift
 //  MyRecipes
 //
-//  Created by lavinia.binisor on 04.10.2023.
+//  Created by Lavinia Maria Binisor on 04.10.2023.
 //
 
 import SwiftUI
 
-struct TabBar: View {
+struct MainTabView: View {
     var body: some View {
         TabView {
             HomeView()
@@ -20,23 +20,18 @@ struct TabBar: View {
                     Label("Categories", systemImage: "square.fill.text.grid.1x2")
                 }
             
-            NewRecipeView()
-                .tabItem {
-                    Label("New", systemImage: "plus")
-                }
-            
             FavoriteView()
                 .tabItem {
                     Label("Favorites", systemImage: "heart")
                 }
         }
-        
     }
 }
 
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabBar()
+        MainTabView()
+            .environmentObject(RecipesViewModel())
     }
 }

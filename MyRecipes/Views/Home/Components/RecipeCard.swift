@@ -2,7 +2,7 @@
 //  RecipeCard.swift
 //  MyRecipes
 //
-//  Created by lavinia.binisor on 05.10.2023.
+//  Created by Lavinia Maria Binisor on 05.10.2023.
 //
 
 import SwiftUI

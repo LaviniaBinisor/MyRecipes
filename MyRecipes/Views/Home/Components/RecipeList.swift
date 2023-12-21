@@ -2,7 +2,7 @@
 //  RecipeList.swift
 //  MyRecipes
 //
-//  Created by lavinia.binisor on 05.10.2023.
+//  Created by Lavinia Maria Binisor on 05.10.2023.
 //
 
 import SwiftUI
@@ -34,6 +34,8 @@ struct RecipeList: View {
 
 struct RecipeList_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeList(recipes: Recipe.allRecipes)
+        ScrollView {
+            RecipeList(recipes: Recipe.allRecipes)
+        }
     }
 }

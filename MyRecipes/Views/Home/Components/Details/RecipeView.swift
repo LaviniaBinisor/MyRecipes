@@ -2,7 +2,7 @@
 //  RecipeView.swift
 //  MyRecipes
 //
-//  Created by ionut.binisor on 06.10.2023.
+//  Created by Lavinia Maria Binisor on 06.10.2023.
 //
 
 import SwiftUI
@@ -97,6 +97,6 @@ extension RecipeView {
 
 struct RecipeView_Preview: PreviewProvider {
     static var previews: some View {
-        RecipeView(recipe: Recipe.allRecipes.randomElement()!)
+        RecipeView(recipe: Recipe.allRecipes[0])
     }
 }

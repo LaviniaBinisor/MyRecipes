@@ -2,17 +2,18 @@
 //  CategoryView.swift
 //  MyRecipes
 //
-//  Created by ionut.binisor on 09.10.2023.
+//  Created by Lavinia Maria Binisor on 09.10.2023.
 //
 
 import SwiftUI
 
 struct CategoryView: View {
+    @EnvironmentObject var recipesVM: RecipesViewModel
     var category: Category
     
     //Computed property
     var recipes: [Recipe] {
-        return Recipe.allRecipes.filter{ $0.category == category.rawValue }
+        return recipesVM.recipes.filter{ $0.category == category.rawValue }
     }
     
     var body: some View {
@@ -25,4 +26,5 @@ struct CategoryView: View {
 
 #Preview {
     CategoryView(category: Category.dessert)
+        .environmentObject(RecipesViewModel())
 }

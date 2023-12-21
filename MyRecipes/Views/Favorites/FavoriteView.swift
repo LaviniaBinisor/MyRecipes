@@ -2,7 +2,7 @@
 //  FavoriteView.swift
 //  MyRecipes
 //
-//  Created by lavinia.binisor on 04.10.2023.
+//  Created by Lavinia Maria Binisor on 04.10.2023.
 //
 
 import SwiftUI
