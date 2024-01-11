@@ -16,7 +16,7 @@ struct HomeView: View {
             ScrollView {
                 RecipeList(recipes: recipesVM.recipes)
             }
-            .navigationTitle("My Recipes")
+            .navigationTitle("Recipes")
             .toolbar {
                 Button {
                     showAddRecipe.toggle()
