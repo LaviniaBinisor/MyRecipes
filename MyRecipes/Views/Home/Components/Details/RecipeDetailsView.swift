@@ -1,5 +1,5 @@
 //
-//  RecipeView.swift
+//  RecipeDetailsView.swift
 //  MyRecipes
 //
 //  Created by Lavinia Maria Binisor on 06.10.2023.
@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct RecipeView: View {
+struct RecipeDetailsView: View {
     var recipe: Recipe
+    @State private var showEditRecipe = false
     
     var body: some View {
         ScrollView(.vertical) {
@@ -21,18 +22,27 @@ struct RecipeView: View {
                     composeSection(title: "Ingredients", components: recipe.ingredients)
                 }
                 
-                if !recipe.instructions.isEmpty {
-                    composeSection(title: "Directions", components: recipe.instructions)
+                if !recipe.directions.isEmpty {
+                    composeSection(title: "Directions", components: recipe.directions)
                 }
             }
             .padding(.horizontal)
         }
-        .ignoresSafeArea(edges: .top)
+        .toolbar {
+            Button {
+                showEditRecipe.toggle()
+            } label: {
+                Text("Edit")
+            }
+        }
+        .sheet(isPresented: $showEditRecipe) {
+            AddOrEditRecipeView(existingRecipe: recipe)
+        }
     }
 }
 
 // MARK: View Components
-extension RecipeView {
+extension RecipeDetailsView {
     var headerImage: some View {
         AsyncImage(url: URL(string: recipe.image)) { image in
             image
@@ -97,6 +107,6 @@ extension RecipeView {
 
 struct RecipeView_Preview: PreviewProvider {
     static var previews: some View {
-        RecipeView(recipe: Recipe.allRecipes[0])
+        RecipeDetailsView(recipe: Recipe.allRecipes[0])
     }
 }

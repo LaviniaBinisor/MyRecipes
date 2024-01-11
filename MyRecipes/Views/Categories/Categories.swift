@@ -12,18 +12,23 @@ struct CategoriesView: View {
         NavigationView {
             List {
                 ForEach(Category.allCases) { category in
-                    NavigationLink {
-                        ScrollView {
-                            RecipeList(recipes: Recipe.allRecipes.filter{ $0.category == category.rawValue })
-                        }
-                    } label: {
-                        Text(category.rawValue + "s")
-                    }
+                    rowView(category: category)
                 }
             }
             .navigationTitle("Categories")
         }
         .navigationViewStyle(.stack)
+    }
+    
+    func rowView(category: Category) -> some View {
+        NavigationLink {
+            ScrollView {
+                // TODO: remove .constant for binding
+                RecipeList(recipes: Recipe.allRecipes.filter{ $0.category == category.rawValue })
+            }
+        } label: {
+            Text(category.rawValue + "s")
+        }
     }
 }
 

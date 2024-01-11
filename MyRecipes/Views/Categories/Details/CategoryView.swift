@@ -13,11 +13,12 @@ struct CategoryView: View {
     
     //Computed property
     var recipes: [Recipe] {
-        return recipesVM.recipes.filter{ $0.category == category.rawValue }
+        return recipesVM.recipes.filter { $0.category == category.rawValue }
     }
     
     var body: some View {
         ScrollView {
+            // TODO: is Constant appropriate here?
             RecipeList(recipes: recipes)
         }
         .navigationTitle("My Recipes")

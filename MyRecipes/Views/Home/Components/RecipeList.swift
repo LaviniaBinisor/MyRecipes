@@ -11,22 +11,22 @@ struct RecipeList: View {
     var recipes: [Recipe]
     
     var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             Text("\(recipes.count) \(recipes.count > 1 ? "recipes" : "recipe")")
                 .font(.headline)
                 .foregroundStyle(.primary)
                 .fontWeight(.medium)
             
-            Spacer()
-            
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 2)], spacing: 20) {
                 ForEach(recipes) { recipe in
-                    NavigationLink(destination: RecipeView(recipe: recipe)) {
+                    NavigationLink(destination: RecipeDetailsView(recipe: recipe)) {
                         RecipeCard(recipe: recipe)
                     }
                 }
             }
             .padding(.top)
+            
+            Spacer(minLength: 0)
         }
         .padding(.horizontal)
     }

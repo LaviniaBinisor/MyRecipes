@@ -25,7 +25,7 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $showAddRecipe) {
-                AddRecipeView()
+                AddOrEditRecipeView()
             }
         }
         .navigationViewStyle(.stack)
