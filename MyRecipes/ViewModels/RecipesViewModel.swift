@@ -9,6 +9,14 @@ import Foundation
 
 class RecipesViewModel: ObservableObject {
     @Published private(set) var recipes: [Recipe] = []
+    @Published var filteredRecipe = [Recipe]()
+    @Published var searchText = ""
+    
+    var filteredRecipes: [Recipe] {
+        guard !searchText.isEmpty else { return recipes }
+        
+        return recipes.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+    }
     
     init() {
         recipes = Recipe.allRecipes
@@ -27,4 +35,3 @@ extension RecipesViewModel {
         }
     }
 }
- 
