@@ -23,7 +23,6 @@ struct HomeView: View {
                 }
             }
             .searchable(text: $recipesVM.searchText, prompt: "Find a recipe")
-            .navigationViewStyle(.stack)
             .navigationTitle("Recipes")
             
             .toolbar {
