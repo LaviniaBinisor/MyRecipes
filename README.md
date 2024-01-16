@@ -20,5 +20,3 @@ Welcome to MyRecipes App! 🍳
 ![177fcb3f-d662-4aa8-9ab2-7287f0ef5217](https://github.com/LaviniaBinisor/MyRecipes/assets/136313782/eee43ddf-0b36-4399-9a13-0259bb1f37eb)
 
 ![51478792-df6d-494d-a217-775049271bda](https://github.com/LaviniaBinisor/MyRecipes/assets/136313782/58a9cb52-15be-4ba4-aa24-3f8aa1198535)
-
-![0AB0BACF-29FC-45D5-BF5D-2B2F0E7C1FCF](https://github.com/LaviniaBinisor/MyRecipes/assets/23116497/6abe3410-4523-45dc-affb-47e62ba4ec55)
