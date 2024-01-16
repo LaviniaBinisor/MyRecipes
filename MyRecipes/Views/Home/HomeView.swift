@@ -13,10 +13,19 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                RecipeList(recipes: recipesVM.recipes)
+            VStack {
+                if recipesVM.filteredRecipes.isEmpty {
+                    ContentUnavailableView.search
+                } else {
+                    ScrollView {
+                        RecipeList(recipes: recipesVM.filteredRecipes)
+                    }
+                }
             }
+            .searchable(text: $recipesVM.searchText, prompt: "Find a recipe")
+            .navigationViewStyle(.stack)
             .navigationTitle("Recipes")
+            
             .toolbar {
                 Button {
                     showAddRecipe.toggle()
@@ -28,7 +37,6 @@ struct HomeView: View {
                 AddOrEditRecipeView()
             }
         }
-        .navigationViewStyle(.stack)
     }
 }
 
