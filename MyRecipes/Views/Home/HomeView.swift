@@ -24,7 +24,6 @@ struct HomeView: View {
             }
             .searchable(text: $recipesVM.searchText, prompt: "Find a recipe")
             .navigationTitle("Recipes")
-            
             .toolbar {
                 Button {
                     showAddRecipe.toggle()
