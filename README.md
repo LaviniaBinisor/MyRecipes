@@ -1,6 +1,7 @@
 Welcome to MyRecipes App! 🍳
 
- ## About MyRecipes App is a simple and user-friendly application designed to organize and discover your favorite recipes. Whether you're a passionate chef or someone who loves experimenting in the kitchen, the MyRecipes app provides an intuitive platform to manage and share your culinary creations. 
+ ## About MyRecipes App:
+  Is a simple and user-friendly application designed to organize and discover your favorite recipes. Whether you're a passionate chef or someone who loves experimenting in the kitchen, the MyRecipes app provides an intuitive platform to manage and share your culinary creations. 
 
 ## Current Features :
 - Home: Explore the latest recipes recently added. 
