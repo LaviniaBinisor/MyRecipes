@@ -12,7 +12,7 @@ struct HomeView: View {
     @State private var showAddRecipe = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 if recipesVM.filteredRecipes.isEmpty {
                     ContentUnavailableView.search
