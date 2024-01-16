@@ -12,7 +12,7 @@ struct HomeView: View {
     @State private var showAddRecipe = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 if recipesVM.filteredRecipes.isEmpty {
                     ContentUnavailableView.search
@@ -24,7 +24,6 @@ struct HomeView: View {
             }
             .searchable(text: $recipesVM.searchText, prompt: "Find a recipe")
             .navigationTitle("Recipes")
-            
             .toolbar {
                 Button {
                     showAddRecipe.toggle()
