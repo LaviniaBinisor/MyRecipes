@@ -16,9 +16,6 @@ class RecipesViewModel: ObservableObject {
         guard !searchText.isEmpty else { return recipes }
         
         return recipes.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
-//        return recipes.filter { recipe in
-//            recipe.name.contains(searchText)
-//        }
     }
     
     init() {
@@ -37,8 +34,4 @@ extension RecipesViewModel {
             recipes[index] = recipe
         }
     }
-//        
-//        func search(with searchRecipe: String) {
-//            filteredRecipe = searchRecipe.isEmpty ? recipes : recipes.filter{$0.name.contains(searchRecipe)}
-//        }
 }
