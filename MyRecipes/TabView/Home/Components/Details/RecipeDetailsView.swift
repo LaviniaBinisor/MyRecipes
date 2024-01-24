@@ -98,28 +98,10 @@ extension RecipeDetailsView {
                             .font(.caption)
                     }
                 }
-//                Button(favorites.contains(recipe) ? "Remove from Favorites" : "Add to Favorites") {
-//                    if favorites.contains(recipe){
-//                        favorites.remove(recipe)
-//                    } else {
-//                        favorites.add(recipe)
-//                    }
-//                }
-//                .buttonBorderShape(.capsule)
-//                .padding()
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading)
         }
-//        Button(recipe.isFavorite.contains(recipe) ? "Remove from Favorites" : "Add to Favorites") {
-//            if favorites.contains(recipe){
-//                favorites.remove(recipe)
-//            } else {
-//                favorites.add(recipe)
-//            }
-//        }
-//        .buttonBorderShape(.capsule)
-        //.padding()
     }
 }
 
