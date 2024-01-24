@@ -14,11 +14,11 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                if recipesVM.filteredRecipes.isEmpty {
+                if recipesVM.homeFilteredRecipes.isEmpty {
                     ContentUnavailableView.search
                 } else {
                     ScrollView {
-                        RecipeList(recipes: recipesVM.filteredRecipes)
+                        RecipeList(configuration: .home)
                     }
                 }
             }

@@ -107,6 +107,8 @@ extension RecipeDetailsView {
 
 struct RecipeView_Preview: PreviewProvider {
     static var previews: some View {
-        RecipeDetailsView(recipe: Recipe.allRecipes[0])
+        NavigationStack {
+            RecipeDetailsView(recipe: Recipe.allRecipes[0])
+        }
     }
 }

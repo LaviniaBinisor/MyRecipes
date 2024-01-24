@@ -19,7 +19,8 @@ struct CategoryView: View {
     var body: some View {
         ScrollView {
             // TODO: is Constant appropriate here?
-            RecipeList(recipes: recipes)
+            EmptyView()
+//            RecipeList()
         }
         .navigationTitle("My Recipes")
     }

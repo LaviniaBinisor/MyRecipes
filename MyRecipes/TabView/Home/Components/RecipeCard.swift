@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct RecipeCard: View {
-    var recipe: Recipe
+    let recipe: Recipe
     
     var body: some View {
-        VStack {
+        ZStack(alignment: .topTrailing) {
             AsyncImage(url: URL(string: recipe.image)) { image in
                 image
                     .resizable()
@@ -31,11 +31,18 @@ struct RecipeCard: View {
                     .foregroundStyle(.white.opacity(0.5))
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
+            .frame(width: 160, height: 220, alignment: .top)
+            .background(LinearGradient(gradient: Gradient(colors: [Color(.gray).opacity(0.3), Color(.gray)]), startPoint: .top, endPoint: .bottom))
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .shadow(color: Color.black.opacity(0.3), radius: 15, x: 1, y: 6)
+           
+            Image(systemName: "heart")
+                .fontWeight(.semibold)
+                .font(.title3)
+                .symbolVariant(recipe.isFavorite ? .fill : .none)
+                .foregroundStyle(recipe.isFavorite ? Color.red : Color.black)
+                .padding(10)
         }
-        .frame(width: 160, height: 220, alignment: .top)
-        .background(LinearGradient(gradient: Gradient(colors: [Color(.gray).opacity(0.3), Color(.gray)]), startPoint: .top, endPoint: .bottom))
-        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-        .shadow(color: Color.black.opacity(0.3), radius: 15, x: 1, y: 6)
     }
 }
 
